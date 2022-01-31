@@ -1,9 +1,58 @@
-<html>
-    <body>
-        <div style="text-align: center;">
-        
-            <img src="media/svg/logo.svg" height="200px"/>
-        
-        </div>
-    </body>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      @media (prefers-color-scheme: dark) {
+        body {
+          background-color: #19161d;
+        }
+
+        .icon {
+          background-color: rgba(255, 255, 255, 0.915);
+          -webkit-mask: url(media/svg/logo.svg) no-repeat 50% 50%;
+          mask: url(media/svg/logo.svg) no-repeat 50% 50%;
+          width: 150px;
+          height: 150px;
+          margin: auto;
+        }
+      }
+
+      @media (prefers-color-scheme: light) {
+
+        .icon {
+          background-color: #000;
+          -webkit-mask: url(media/svg/logo.svg) no-repeat 50% 50%;
+          mask: url(media/svg/logo.svg) no-repeat 50% 50%;
+          width: 150px;
+          height: 150px;
+          margin: auto;
+        }
+
+      }
+
+    </style>
+
+    <script>
+      if (
+        window.matchMedia &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches
+      ) {
+        console.log("uses dark mode");
+      }
+
+      window
+        .matchMedia("(prefers-color-scheme: dark)")
+        .addListener(function (e) {
+          console.log(`changed to ${e.matches ? "dark" : "light"} mode`);
+        });
+    </script>
+  </head>
+  <body>
+    <div style="text-align: center" class="icon"></div>
+  </body>
 </html>

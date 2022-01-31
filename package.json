@@ -1,0 +1,26 @@
+{
+  "name": "baturayd.github.io",
+  "version": "1.0.0",
+  "description": "personal blog",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/baturayd/baturayd.github.io.git"
+  },
+  "keywords": [
+    "blog"
+  ],
+  "author": "baturayd",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/baturayd/baturayd.github.io/issues"
+  },
+  "homepage": "https://github.com/baturayd/baturayd.github.io#readme",
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  }
+}
